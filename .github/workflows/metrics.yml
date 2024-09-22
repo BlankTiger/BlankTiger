@@ -28,7 +28,6 @@ jobs:
           template: classic
           config_timezone: Europe/Warsaw
           plugins_errors_fatal: yes
-          output_action: none
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           plugin_languages: yes
@@ -41,13 +40,3 @@ jobs:
           plugin_languages_recent_days: 14
           plugin_notable: yes
           plugin_notable_repositories: no
-      - name: Force push image
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git reset --hard
-          git clean -df
-          sudo cp /metrics_renders/* ./
-          git add --all
-          git commit -m "Update metrics image"
-          git push --force --set-upstream origin $IMAGE_BRANCH
