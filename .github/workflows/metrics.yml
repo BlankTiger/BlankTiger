@@ -11,6 +11,8 @@ env:
 jobs:
   metrics:
     runs-on: ubuntu-latest
+    environment:
+      name: metrics
     permissions:
       contents: write
     steps:
