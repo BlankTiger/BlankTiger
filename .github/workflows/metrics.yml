@@ -42,3 +42,4 @@ jobs:
           plugin_notable_repositories: no
           plugin_habits: yes
           plugin_habits_days: 30
+          plugin_habits_charts: yes
