@@ -27,7 +27,7 @@ jobs:
           base: header, activity, community, repositories
           template: classic
           config_timezone: Europe/Warsaw
-          config_order: base.header, base.activity, base.community, base.repositories, isocalendar, languages, habits
+          config_order: base.header, base.activity+community, base.repositories, isocalendar, languages, habits
           plugins_errors_fatal: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
