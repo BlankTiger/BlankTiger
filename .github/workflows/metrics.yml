@@ -42,6 +42,6 @@ jobs:
           plugin_languages_recent_days: 14
           plugin_notable: no
           plugin_notable_repositories: no
-          plugin_habits: yes
-          plugin_habits_days: 30
-          plugin_habits_charts: yes
+          # plugin_habits: yes
+          # plugin_habits_days: 30
+          # plugin_habits_charts: yes
