@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Generate metrics image
-        uses: lowlighter/metrics@latest
+        uses: blanktiger/metrics
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories
