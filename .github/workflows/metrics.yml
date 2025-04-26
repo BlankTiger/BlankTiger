@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Generate metrics image
-        uses: blanktiger/metrics
+        uses: blanktiger/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories
