@@ -20,6 +20,20 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      # Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # Cache Docker layers
+      - name: Cache Docker layers
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
       - name: Generate metrics image
         uses: blanktiger/metrics@master
         with:
@@ -28,7 +42,6 @@ jobs:
           template: classic
           config_timezone: Europe/Warsaw
           config_order: base.header, base.activity+community, base.repositories, isocalendar, languages
-          # config_order: base.header, base.activity+community, base.repositories, isocalendar, languages, habits
           plugins_errors_fatal: yes
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
@@ -42,6 +55,3 @@ jobs:
           plugin_languages_recent_days: 14
           plugin_notable: no
           plugin_notable_repositories: no
-          # plugin_habits: yes
-          # plugin_habits_days: 30
-          # plugin_habits_charts: yes
