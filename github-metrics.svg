@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="662" class="">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="660" class="">
     <defs>
         <style/>
     </defs>
@@ -253,7 +253,7 @@
                         </div>
                     </section>
                 </div>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="margin-top: -130px; margin-left: -5px;" viewBox="0,0 480,170">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" style="margin-top: -130px; margin-left: 0px;" viewBox="0,0 480,170">
                     <filter id="brightness1">
                         <feComponentTransfer>
                             <feFuncR type="linear" slope="0.6"/>
@@ -268,7 +268,7 @@
                             <feFuncB type="linear" slope="0.19999999999999996"/>
                         </feComponentTransfer>
                     </filter>
-                    <g transform="scale(4) translate(10, 0)">
+                    <g transform="scale(4) translate(11, 0)">
                         <g transform="translate(0, 0)">
                             <g transform="translate(0, 6)">
                                 <path fill="#ebedf0" d="M1.7,2 0,1 1.7,0 3.4,1 z"/>
