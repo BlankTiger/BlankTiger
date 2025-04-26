@@ -21,6 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Create cache directory
+      - name: Create cache directory
+        run: mkdir -p /tmp/.buildx-cache
+
       # Set up Docker Buildx
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -46,6 +50,7 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
           plugin_languages: yes
+          plugin_languages_ignored: javascript, html, css, scss
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_colors: github
