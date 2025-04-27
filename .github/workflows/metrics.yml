@@ -21,23 +21,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Create cache directory
-      - name: Create cache directory
-        run: mkdir -p /tmp/.buildx-cache
-
-      # Set up Docker Buildx
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
-      # Cache Docker layers
-      - name: Cache Docker layers
-        uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-buildx-
-
       - name: Generate metrics image
         uses: blanktiger/metrics@master
         with:
